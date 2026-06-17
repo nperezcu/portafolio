@@ -98,7 +98,7 @@ const DATOS = {
       imagen: "assets/proyecto_riesgo.png",
       tags: ["Machine Learning", "Finanzas", "Python"],
       tecnologias: ["Python", "XGBoost", "SHAP", "Streamlit", "Parquet"],
-      repo: "https://github.com/TU_USUARIO/riesgo-cartera-colombia",
+      repo: "https://github.com/nperezcu/riesgo-cartera-colombia",
       demo: "https://riesgo-cartera-colombia.streamlit.app/", 
       destacado: true,
     },
