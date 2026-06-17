@@ -112,23 +112,9 @@ const DATOS = {
       tags: ["Machine Learning", "Finanzas", "Python"],
       tecnologias: ["Python", "XGBoost", "SHAP", "Streamlit", "Parquet"],
       repo: "https://github.com/TU_USUARIO/riesgo-cartera-colombia",
-      demo: "", // ej: enlace a Streamlit Cloud si lo despliegas
+      demo: "https://riesgo-cartera-colombia.streamlit.app/", 
       destacado: true,
     },
-    {
-      titulo: "EDA del sistema bancario colombiano",
-      descripcion:
-        "Análisis exploratorio del NPL del sistema 2015–2023: series por banco, " +
-        "choque COVID, correlaciones entre ratios financieros y detección de " +
-        "outliers con interpretación económica (microcrédito vs banca comercial).",
-      imagen: "assets/proyecto_npl.png",
-      tags: ["EDA", "Finanzas", "Python"],
-      tecnologias: ["Pandas", "Matplotlib", "Seaborn"],
-      repo: "https://github.com/TU_USUARIO/riesgo-cartera-colombia",
-      demo: "",
-      destacado: false,
-    },
-    /* ← Agrega aquí tu próximo proyecto copiando un bloque { ... } */
   ],
 
   /* ── Experiencia (línea de tiempo) ─────────────────────────────────────── */
@@ -189,7 +175,6 @@ experiencia: [
         "Curso 2: Modelos predictivos con aprendizaje automatico "+
         "Curso 3: Integración y preparación de datos.",
     },
-    /* ← Agrega aquí cursos y certificaciones (Coursera, DataCamp, etc.) */
   ],
 
   /* ── Pie de página ─────────────────────────────────────────────────────── */
