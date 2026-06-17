@@ -96,7 +96,7 @@ const DATOS = {
         "Incluye dashboard Streamlit y una auditoría que detectó y corrigió " +
         "defectos de construcción del target que inflaban el R².",
       imagen: "assets/riesgo.png",
-      tags: ["Machine Learning", "Finanzas", "Python"],
+      tags: ["Machine Learning", "Python"],
       tecnologias: ["Python", "XGBoost", "SHAP", "Streamlit", "Parquet"],
       repo: "https://github.com/nperezcu/riesgo-cartera-colombia",
       demo: "https://riesgo-cartera-colombia.streamlit.app/", 
@@ -109,7 +109,7 @@ const DATOS = {
         "en una base de datos estructurada y los analiza geoespacialmente para apoyar decisiones sobre la ubicación " +
         "de recursos de atención prehospitalaria en Bogotá, Colombia. ",
       imagen: "assets/ambulancias.png",
-      tags: ["Análisis de datos", "Datos georreferenciados", "R", "Python"],
+      tags: ["Análisis de datos", "R", "Python"],
       tecnologias: ["Python", "R", "tydiverse", "tidygeocoder", "lubridate"],
       repo: "https://github.com/nperezcu/Proyecto-analisis-de-datos-georreferenciados",
       demo: "https://nperezcu.github.io/Reporte-alianza-codigo-rojo/", 
