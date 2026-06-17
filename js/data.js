@@ -153,10 +153,13 @@ experiencia: [
       "estructurándolos en Excel para el análisis." +
       "Apliqué análisis espacial sobre la base construida para identificar zonas críticas de alta demanda, "+
       "llevando a la organización a tomar decisiones de reubicación de ambulancias por primera vez basadas en evidencia.",
+    }, 
+    { 
       periodo: "Ene 2025 — Jun 2025",
       cargo: "Analista de Datos",
       lugar: "Viajes Descubre",
-      descripcion: "Análisis de rentabilidad sobre +10.000 registros turísticos[cite: 1]. Automatización de reportes de KPIs con Power BI, reduciendo tiempos de 3 horas a 15 minutos."
+      descripcion: "Análisis de rentabilidad sobre +10.000 registros turísticos. " +
+      "Automatización de reportes de KPIs con Power BI, reduciendo tiempos de 3 horas a 15 minutos."
     },
     {
       periodo: "Jun 2022 — Dic 2022",
