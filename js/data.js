@@ -95,11 +95,24 @@ const DATOS = {
         "sin leakage, XGBoost con split temporal purgado y explicabilidad SHAP. " +
         "Incluye dashboard Streamlit y una auditoría que detectó y corrigió " +
         "defectos de construcción del target que inflaban el R².",
-      imagen: "assets/proyecto_riesgo.png",
+      imagen: "assets/riesgo.png",
       tags: ["Machine Learning", "Finanzas", "Python"],
       tecnologias: ["Python", "XGBoost", "SHAP", "Streamlit", "Parquet"],
       repo: "https://github.com/nperezcu/riesgo-cartera-colombia",
       demo: "https://riesgo-cartera-colombia.streamlit.app/", 
+      destacado: true,
+    },
+    {
+      titulo: "Analisis de datos de emergencias médicas — Alianza Código Rojo",
+      descripcion:
+        "Proyecto de consultoría que transforma registros de pacientes enviados por WhatsApp " +
+        "en una base de datos estructurada y los analiza geoespacialmente para apoyar decisiones sobre la ubicación " +
+        "de recursos de atención prehospitalaria en Bogotá, Colombia. ",
+      imagen: "assets/ambulancias.png",
+      tags: ["Análisis de datos", "Datos georreferenciados", "R", "Python"],
+      tecnologias: ["Python", "R", "tydiverse", "tidygeocoder", "lubridate"],
+      repo: "https://github.com/nperezcu/Proyecto-analisis-de-datos-georreferenciados",
+      demo: "https://nperezcu.github.io/Reporte-alianza-codigo-rojo/", 
       destacado: true,
     },
   ],
