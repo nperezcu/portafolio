@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portafolio · Científico de Datos</title>
+  <meta name="description" content="Portafolio de ciencia de datos: machine learning, estadística y riesgo financiero." />
+
+  <!-- Tipografías -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='80' font-size='80'>📊</text></svg>" />
+</head>
+<body>
+
+  <!-- ════════ NAVBAR ════════ -->
+  <header class="navbar" id="navbar">
+    <nav class="navbar-inner">
+      <a href="#inicio" class="logo">
+        <span class="logo-mark" id="logo-iniciales">N</span>
+        <span class="logo-text mono" id="logo-nombre">portafolio</span>
+      </a>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#perfil">Perfil</a></li>
+        <li><a href="#habilidades">Habilidades</a></li>
+        <li><a href="#proyectos">Proyectos</a></li>
+        <li><a href="#trayectoria">Trayectoria</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button id="theme-toggle" class="icon-btn" title="Cambiar tema" aria-label="Cambiar tema">🌙</button>
+        <button id="menu-toggle" class="icon-btn menu-btn" aria-label="Abrir menú">☰</button>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <!-- ════════ HERO ════════ -->
+    <section class="hero" id="inicio">
+      <div class="hero-grid-bg" aria-hidden="true"></div>
+      <div class="container hero-inner">
+        <p class="hero-hello mono reveal">Hola, soy</p>
+        <h1 class="hero-nombre reveal" id="hero-nombre">—</h1>
+        <h2 class="hero-typed reveal">
+          <span class="mono" id="typed"></span><span class="cursor" aria-hidden="true">▌</span>
+        </h2>
+        <p class="hero-resumen reveal" id="hero-resumen"></p>
+        <div class="hero-cta reveal">
+          <a href="#proyectos" class="btn btn-primario">Ver proyectos</a>
+          <a href="#" id="btn-cv" class="btn btn-secundario" download>Descargar CV</a>
+        </div>
+        <div class="hero-redes reveal" id="hero-redes"></div>
+      </div>
+      <a href="#perfil" class="scroll-hint" aria-label="Bajar">↓</a>
+    </section>
+
+    <!-- ════════ PERFIL ════════ -->
+    <section class="seccion" id="perfil">
+      <div class="container">
+        <h2 class="seccion-titulo reveal"><span class="mono num">01.</span> Perfil</h2>
+        <div class="perfil-grid">
+          <div class="perfil-texto reveal" id="sobre-mi"></div>
+          <aside class="perfil-aside reveal">
+            <div class="avatar" id="avatar">N</div>
+            <p class="ubicacion mono" id="ubicacion">📍 —</p>
+          </aside>
+        </div>
+        <div class="stats-grid" id="datos-rapidos"></div>
+      </div>
+    </section>
+
+    <!-- ════════ HABILIDADES ════════ -->
+    <section class="seccion seccion-alt" id="habilidades">
+      <div class="container">
+        <h2 class="seccion-titulo reveal"><span class="mono num">02.</span> Habilidades</h2>
+        <div class="skills-grid" id="skills"></div>
+      </div>
+    </section>
+
+    <!-- ════════ PROYECTOS ════════ -->
+    <section class="seccion" id="proyectos">
+      <div class="container">
+        <h2 class="seccion-titulo reveal"><span class="mono num">03.</span> Proyectos</h2>
+        <div class="filtros reveal" id="filtros"></div>
+        <div class="proyectos-grid" id="lista-proyectos"></div>
+      </div>
+    </section>
+
+    <!-- ════════ TRAYECTORIA ════════ -->
+    <section class="seccion seccion-alt" id="trayectoria">
+      <div class="container">
+        <h2 class="seccion-titulo reveal"><span class="mono num">04.</span> Trayectoria</h2>
+        <div class="trayectoria-grid">
+          <div class="reveal">
+            <h3 class="sub-titulo mono">// Experiencia</h3>
+            <div class="timeline" id="experiencia"></div>
+          </div>
+          <div class="reveal">
+            <h3 class="sub-titulo mono">// Educación</h3>
+            <div class="timeline" id="educacion"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ════════ CONTACTO ════════ -->
+    <section class="seccion" id="contacto">
+      <div class="container contacto-inner reveal">
+        <h2 class="seccion-titulo centrado"><span class="mono num">05.</span> Contacto</h2>
+        <p class="contacto-texto">
+          ¿Tienes un proyecto de datos o una vacante? Escríbeme — siempre estoy
+          abierto a hablar de datos, modelos y buenas preguntas.
+        </p>
+        <a href="#" id="btn-email" class="btn btn-primario btn-grande">Enviar correo</a>
+        <div class="hero-redes" id="contacto-redes"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p class="mono" id="footer-texto"></p>
+    <p class="mono footer-anio">© <span id="anio"></span> · <span id="footer-nombre"></span></p>
+  </footer>
+
+  <button id="volver-arriba" class="volver-arriba" aria-label="Volver arriba" title="Volver arriba">↑</button>
+
+  <!-- El contenido vive en data.js; main.js solo lo pinta -->
+  <script src="js/data.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
