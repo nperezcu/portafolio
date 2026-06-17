@@ -1,16 +1,3 @@
-/* ============================================================================
-   ARCHIVO DE CONTENIDO — EDITA SOLO ESTE ARCHIVO
-   ----------------------------------------------------------------------------
-   Todo lo que se muestra en la página sale de aquí. Para actualizar tu
-   portafolio (nuevos proyectos, skills, experiencia) no necesitas tocar
-   index.html ni main.js: edita los textos de abajo y recarga la página.
-
-   Consejos:
-   - Mantén las comillas y las comas tal como están.
-   - Para agregar un proyecto, copia un bloque { ... } de PROYECTOS y pégalo
-     debajo, separado por coma.
-   - Las imágenes van en la carpeta assets/ (usa rutas tipo "assets/foto.png").
-   ========================================================================== */
 
 const DATOS = {
 
@@ -21,16 +8,16 @@ const DATOS = {
   // Frases que se escriben solas en el hero (efecto máquina de escribir)
   frases: [
     "Ciencia de Datos",
-    "Estadística · Universidad Nacional de Colombia",
+    "Estadística · UNAL",
     "Machine Learning",
     "Análisis de datos",
   ],
   resumen:
-    "Estudiante de Estadística de la Universidad Nacional de Colombia. " +
+    "Estadístico de la Universidad Nacional de Colombia. " +
     "Construyo pipelines de datos reproducibles y modelos de machine learning " +
-    "explicables, con énfasis en riesgo financiero y banca. Me interesa el " +
-    "análisis honesto: validar los datos antes que las métricas.",
-
+    "explicables, con proyectos en riesgo financiero, análisis espacial y un sólido " +
+    "conocimiento técnico. Ayudo a tomar decisiones basadas en datos con " +
+    "soluciones analíticas transparentes y libres de fugas de información.",
   ubicacion: "Medellín, Colombia",
   email: "nperezcu@unal.edu.co",
 
