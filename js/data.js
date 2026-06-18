@@ -40,7 +40,7 @@ const DATOS = {
     "para optimizar la logística de un servicio de ambulancias, hasta construir pipelines financieros con SQL, Python y Power BI " +
     "que reducen tiempos operativos de horas a minutos.",
 
-    "Mi proyecto insignia audita y modela el riesgo de deterioro de cartera " +
+    "Mi proyecto principal audita y modela el riesgo de deterioro de cartera " +
     "del sistema bancario colombiano con datos reales de la Superintendencia " +
     "Financiera: 106 archivos mensuales consolidados en un panel de 30 bancos " +
     "(2015–2023), clustering de entidades y un pipeline de ML donde el " +
@@ -151,7 +151,7 @@ experiencia: [
       periodo: "Jun 2022 — Dic 2022",
       cargo: "Gestión y Validación de Datos Epidemiológicos",
       lugar: "Home Health",
-      descripcion: "Aseguramiento de calidad y validación de +10.000 registros para el monitoreo de salud pública (Covid-19)." +
+      descripcion: "Aseguramiento de calidad y validación de +10.000 registros para el monitoreo de salud pública (Covid-19) " +
       "para el monitoreo de medidas preventivas y la toma de desiciones en salud pública."
     }
   ],
@@ -161,7 +161,7 @@ experiencia: [
     {
       periodo: "En curso",
       titulo: "Pregrado en Estadística",
-      lugar: "Universidad Nacional de Colombia — Bogotá",
+      lugar: "Universidad Nacional de Colombia — Sede Medellín",
       descripcion:
         "Estadística, matemática, inferencia, probabilidad, métodos estadisticos multivariados, series de tiempo " +
         "regresión lineal, lógica matematica, diseño muestral, análisis de datos, programación en R y Python, entre otros.",
