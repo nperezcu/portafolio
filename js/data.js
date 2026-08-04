@@ -115,6 +115,19 @@ const DATOS = {
       demo: "https://nperezcu.github.io/Reporte-alianza-codigo-rojo/", 
       destacado: true,
     },
+    {
+      titulo: "Predicción de precios de servicios — para Nitro 2Tech",
+      descripcion:
+        "Proyecto end-to-end de ciencia de datos enfocado en la estimación dinámica de tarifas para los servicios de Nitro2Tech. " +
+        "El proyecto abarca desde la generación de un dataset simulado multivariable el entrenamiento del modelo predictivo, " +
+        "hasta su despliegue en una plataforma web estática e interactiva que permite cotizaciones personalizadas en tiempo real.",
+      imagen: "assets/Logo Nitro.png",
+      tags: ["Machine Learning", "Python"],
+      tecnologias: ["Python", "HTML", "Javascript", "IA"],
+      repo: "https://github.com/nperezcu/Predicci-n-de-precios",
+      demo: "https://nperezcu.github.io/Predicci-n-de-precios", 
+      destacado: true,
+    },
   ],
 
   /* ── Experiencia (línea de tiempo) ─────────────────────────────────────── */
