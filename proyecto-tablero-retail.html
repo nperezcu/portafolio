@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Panel de información financiera · Power BI</title>
+  <meta name="description" content="Tablero financiero en Power BI sobre 9.994 transacciones minoristas: dónde el descuento deja de ser rentable." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="stylesheet" href="css/proyecto.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='80' font-size='80'>📊</text></svg>" />
+</head>
+<body>
+
+  <!-- ════════ NAVBAR ════════ -->
+  <header class="navbar" id="navbar">
+    <nav class="navbar-inner">
+      <a href="index.html#inicio" class="logo">
+        <span class="logo-mark" id="logo-iniciales">N</span>
+        <span class="logo-text mono" id="logo-nombre">portafolio</span>
+      </a>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html#perfil">Perfil</a></li>
+        <li><a href="index.html#habilidades">Habilidades</a></li>
+        <li><a href="index.html#proyectos">Proyectos</a></li>
+        <li><a href="index.html#trayectoria">Trayectoria</a></li>
+        <li><a href="index.html#contacto">Contacto</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button id="theme-toggle" class="icon-btn" title="Cambiar tema" aria-label="Cambiar tema">🌙</button>
+        <button id="menu-toggle" class="icon-btn menu-btn" aria-label="Abrir menú">☰</button>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <!-- ════════ CABECERA DEL CASO ════════ -->
+    <section class="caso-hero">
+      <div class="hero-grid-bg" aria-hidden="true"></div>
+      <div class="container">
+        <a href="index.html#proyectos" class="volver-link reveal">← Volver a proyectos</a>
+        <p class="caso-eyebrow reveal">POWER BI · RETAIL Y COMERCIO</p>
+        <h1 class="caso-titulo reveal">Cuando el descuento se come el margen</h1>
+        <p class="caso-bajada reveal">
+          Un tablero financiero sobre 9.994 transacciones minoristas que localiza el punto
+          exacto donde vender deja de ser rentable.
+        </p>
+
+        <div class="caso-meta reveal">
+          <span><b>Herramientas:</b> Power BI Desktop · Power Query (M) · DAX · Power BI Service</span>
+          <span><b>Trabajo:</b> Modelado, limpieza, inteligencia de tiempo, diseño de tablero</span>
+          <span><b>Estado:</b> Publicado</span>
+        </div>
+
+        <div class="kpi-grid reveal">
+          <div class="kpi">
+            <div class="kpi-num">9.994</div>
+            <div class="kpi-texto">transacciones analizadas (2014–2017)</div>
+          </div>
+          <div class="kpi">
+            <div class="kpi-num">12,47 %</div>
+            <div class="kpi-texto">margen global del negocio</div>
+          </div>
+          <div class="kpi">
+            <div class="kpi-num negativo">−78,82 %</div>
+            <div class="kpi-texto">margen de las ventas con más de 45 % de descuento</div>
+          </div>
+          <div class="kpi">
+            <div class="kpi-num negativo">20,4 %</div>
+            <div class="kpi-texto">de los pedidos cerraron en pérdida</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ════════ TABLERO INCRUSTADO ════════ -->
+    <section class="seccion seccion-alt" id="tablero" style="padding-top: 64px;">
+      <div class="container">
+        <h2 class="seccion-titulo reveal"><span class="mono num">01.</span> El tablero</h2>
+
+        <div class="tablero-marco reveal">
+          <div class="tablero-barra">
+            <span class="puntos" aria-hidden="true"><i></i><i></i><i></i></span>
+            <span>Panel de información financiera — Power BI Service</span>
+            <span class="mono">Interactivo</span>
+          </div>
+          <div class="tablero-embed" id="tablero-embed">
+            <!-- El iframe se inyecta desde el script del pie usando TABLERO_URL -->
+          </div>
+        </div>
+
+        <p class="tablero-nota reveal">
+          <span>Informe interactivo: usa los segmentadores de año, estado, producto y categoría.
+          Abre filtrado a 2015 para que las comparaciones contra el año anterior tengan período
+          con el cual medirse; las cifras del caso de estudio corresponden al total 2014–2017.</span>
+          <a id="tablero-link" href="#" target="_blank" rel="noopener">Abrir en pantalla completa →</a>
+        </p>
+      </div>
+    </section>
+
+    <!-- ════════ CASO DE ESTUDIO ════════ -->
+    <section class="seccion" id="caso">
+      <div class="container">
+        <h2 class="seccion-titulo reveal"><span class="mono num">02.</span> El caso de estudio</h2>
+
+        <div class="caso-cuerpo">
+          <p class="reveal">
+            Un tablero de análisis financiero construido sobre un histórico de cuatro años de
+            ventas minoristas. El objetivo no era mostrar cuánto se vendió, sino responder una
+            pregunta más incómoda: dónde se está perdiendo plata y por qué.
+          </p>
+          <p class="reveal">
+            El resultado señala una causa concreta. El negocio opera con un margen global del
+            12,47 %, pero ese promedio esconde que las ventas sin descuento rinden un 29,51 %
+            mientras que las que superan el 45 % de descuento pierden un 78,82 %. Tres
+            subcategorías de producto operan en rojo de forma sostenida.
+          </p>
+
+          <h3 class="reveal">El problema</h3>
+          <p class="reveal">
+            El dataset traía un histórico de cuatro años de ventas minoristas: 9.994 transacciones
+            con cliente, producto, geografía, descuento y rentabilidad por línea.
+          </p>
+          <p class="reveal">
+            Al cargarlo en Power BI, la ganancia total salía mayor que las ventas totales. Un
+            imposible contable que invalidaba todo el tablero.
+          </p>
+
+          <h3 class="reveal">El diagnóstico</h3>
+          <p class="reveal">
+            El archivo estaba bien. El problema era la configuración regional en la lectura del CSV.
+          </p>
+          <p class="reveal">
+            Power BI interpretaba el punto decimal como separador de miles. Como la columna de
+            ganancia tenía cuatro decimales en la mayoría de sus filas y la de ventas solo dos, la
+            ganancia se inflaba diez mil veces mientras las ventas solo cien. De ahí que la ganancia
+            superara a las ventas.
+          </p>
+          <p class="reveal">
+            La pista que lo confirmó: la única columna correcta era la de unidades vendidas, que al
+            ser un entero no contenía ningún punto que malinterpretar. Simulando la lectura errónea
+            sobre el archivo original, los números reprodujeron exactamente lo que mostraba el
+            tablero, dígito por dígito.
+          </p>
+
+          <div class="tabla-wrap reveal">
+            <table class="tabla-datos">
+              <caption>Valores erróneos vs. valores reales</caption>
+              <thead>
+                <tr><th>Tarjeta</th><th class="num">Valor erróneo</th><th class="num">Valor real</th></tr>
+              </thead>
+              <tbody>
+                <tr><td class="dato">Ventas totales</td><td class="num">1.131.840.435</td><td class="num">2.297.200,86</td></tr>
+                <tr><td class="dato">Ganancia neta</td><td class="num">1.799.876.340</td><td class="num">286.397,02</td></tr>
+                <tr><td class="dato">Margen</td><td class="num">159 %</td><td class="num">12,47 %</td></tr>
+                <tr><td class="dato">Descuento promedio</td><td class="num">175 %</td><td class="num">15,62 %</td></tr>
+                <tr><td class="dato">Unidades vendidas</td><td class="num">37.873</td><td class="num">37.873</td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <h3 class="reveal">La solución técnica</h3>
+          <p class="reveal">
+            Conversión de tipos con configuración regional explícita en Power Query:
+          </p>
+
+          <div class="codigo reveal">
+            <div class="codigo-cab">Power Query · M</div>
+<pre><code>= Table.TransformColumnTypes(
+    #"Tipo cambiado",
+    {{"Order Date", type date}, {"Ship Date", type date},
+     {"Sales", type number}, {"Profit", type number},
+     {"Discount", type number}},
+    "en-US"
+)</code></pre>
+          </div>
+
+          <p class="reveal">
+            El detalle que hace la diferencia: el paso automático de tipos que Power Query genera al
+            importar ya había dañado las columnas. Convertir con la configuración correcta
+            <em>después</em> no repara nada, porque el punto decimal ya se perdió. Hubo que quitar
+            esas columnas del paso original para que llegaran como texto a la conversión correcta.
+          </p>
+          <p class="reveal">
+            También se depuró el modelo: se eliminaron tres columnas precalculadas que eran
+            derivaciones deterministas de otras (precio unitario y conversiones de moneda), y se
+            reemplazaron por medidas DAX. Así la tasa de cambio vive en un solo lugar y se puede
+            parametrizar sin tocar el origen de datos.
+          </p>
+
+          <h3 class="reveal">El hallazgo</h3>
+          <p class="reveal">
+            Con los datos ya confiables, el análisis apuntó a una sola variable: el descuento.
+          </p>
+
+          <div class="tabla-wrap reveal">
+            <table class="tabla-datos">
+              <caption>Margen por tramo de descuento</caption>
+              <thead>
+                <tr><th>Tramo de descuento</th><th class="num">Líneas</th><th class="num">Ventas</th><th class="num">Margen</th></tr>
+              </thead>
+              <tbody>
+                <tr><td class="dato">Sin descuento</td><td class="num">4.798</td><td class="num">1.087.908</td><td class="num val-pos">29,51 %</td></tr>
+                <tr><td class="dato">1 – 15 %</td><td class="num">146</td><td class="num">81.928</td><td class="num">12,75 %</td></tr>
+                <tr><td class="dato">16 – 25 %</td><td class="num">3.657</td><td class="num">764.594</td><td class="num">11,82 %</td></tr>
+                <tr><td class="dato">26 – 45 %</td><td class="num">471</td><td class="num">239.623</td><td class="num val-neg">−15,99 %</td></tr>
+                <tr><td class="dato">Más de 45 %</td><td class="num">922</td><td class="num">123.147</td><td class="num val-neg">−78,82 %</td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <p class="reveal">Pasando del 25 % de descuento, cada venta destruye valor.</p>
+
+          <blockquote class="caso-cita reveal">
+            Las ventas con más de 45 % de descuento generaron 123 mil dólares de facturación y 97
+            mil de pérdida.
+          </blockquote>
+
+          <p class="reveal">
+            El efecto se rastrea hasta subcategorías concretas. Las tres que operan en pérdida son
+            también las que más se descuentan:
+          </p>
+
+          <div class="tabla-wrap reveal">
+            <table class="tabla-datos">
+              <caption>Subcategorías que destruyen margen</caption>
+              <thead>
+                <tr><th>Subcategoría</th><th class="num">Ventas</th><th class="num">Margen</th><th class="num">Descuento prom.</th></tr>
+              </thead>
+              <tbody>
+                <tr><td class="dato">Tables</td><td class="num">206.966</td><td class="num val-neg">−8,56 %</td><td class="num">26,1 %</td></tr>
+                <tr><td class="dato">Bookcases</td><td class="num">114.880</td><td class="num val-neg">−3,02 %</td><td class="num">21,1 %</td></tr>
+                <tr><td class="dato">Supplies</td><td class="num">46.674</td><td class="num val-neg">−2,55 %</td><td class="num">7,7 %</td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <p class="reveal">
+            Juntas representan 368.520 dólares de facturación —el 16 % del negocio— y pierden
+            22.387 dólares. A nivel de pedido: <strong>1.022 de 5.009 pedidos (20,4 %) cerraron en
+            pérdida</strong>, por un total de 139.934 dólares.
+          </p>
+
+          <h3 class="reveal">La evolución en el tiempo</h3>
+
+          <div class="tabla-wrap reveal">
+            <table class="tabla-datos">
+              <caption>Ventas, ganancia y margen por año</caption>
+              <thead>
+                <tr><th>Año</th><th class="num">Ventas</th><th class="num">Var.</th><th class="num">Ganancia</th><th class="num">Margen</th></tr>
+              </thead>
+              <tbody>
+                <tr><td class="dato">2014</td><td class="num">484.248</td><td class="num">—</td><td class="num">49.544</td><td class="num">10,23 %</td></tr>
+                <tr><td class="dato">2015</td><td class="num">470.533</td><td class="num val-neg">−2,83 %</td><td class="num">61.619</td><td class="num">13,10 %</td></tr>
+                <tr><td class="dato">2016</td><td class="num">609.206</td><td class="num val-pos">+29,47 %</td><td class="num">81.795</td><td class="num">13,43 %</td></tr>
+                <tr><td class="dato">2017</td><td class="num">733.215</td><td class="num val-pos">+20,36 %</td><td class="num">93.439</td><td class="num">12,74 %</td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <p class="reveal">
+            Un dato que conecta con el hallazgo principal: en 2017 las unidades vendidas crecieron
+            26,83 % pero la facturación solo 20,36 %. Se vendió más volumen a menor valor unitario.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ════════ COMPOSICIÓN DEL TABLERO ════════ -->
+    <section class="seccion seccion-alt" id="composicion">
+      <div class="container">
+        <h2 class="seccion-titulo reveal"><span class="mono num">03.</span> Composición del tablero</h2>
+
+        <div class="caso-cuerpo">
+          <ul class="caso-lista reveal">
+            <li><strong>Fila de indicadores.</strong> Ventas totales, ganancia neta, margen de beneficio, unidades vendidas y descuento promedio, cada uno con su variación contra el mismo período del año anterior en verde o rojo.</li>
+            <li><strong>Desempeño de ventas y ganancias.</strong> Área temporal comparando facturación contra rentabilidad. La brecha entre ambas líneas es visualmente el costo de operación.</li>
+            <li><strong>Ventas por estado.</strong> Mapa de burbujas con distribución geográfica.</li>
+            <li><strong>Impacto del descuento en el margen.</strong> El visual central del tablero. Barras divergentes por tramo de descuento, con las negativas en rojo. Es el que explica el problema.</li>
+            <li><strong>Subcategorías que destruyen margen.</strong> Las cinco peores líneas de producto por margen, con formato condicional.</li>
+            <li><strong>Distribución de ventas por categoría.</strong> Anillo de participación por categoría.</li>
+            <li><strong>Segmentadores.</strong> Año-mes, estado, producto y categoría, sincronizados en todo el informe.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ════════ DETALLES TÉCNICOS ════════ -->
+    <section class="seccion" id="tecnica">
+      <div class="container">
+        <h2 class="seccion-titulo reveal"><span class="mono num">04.</span> Detalles técnicos</h2>
+
+        <div class="caso-cuerpo">
+          <h4 class="reveal">Tabla calendario</h4>
+          <div class="codigo reveal">
+            <div class="codigo-cab">DAX</div>
+<pre><code>Calendario =
+VAR FechaMin = DATE(YEAR(MIN(supermercado[Order Date])), 1, 1)
+VAR FechaMax = DATE(YEAR(MAX(supermercado[Order Date])), 12, 31)
+RETURN
+ADDCOLUMNS(
+    CALENDAR(FechaMin, FechaMax),
+    "Año", YEAR([Date]),
+    "Mes Nro", MONTH([Date]),
+    "Nombre Mes", FORMAT([Date], "mmmm"),
+    "Año-Mes Nro", FORMAT([Date], "YYYY-MM"),
+    "Año-Mes", FORMAT([Date], "mmm YYYY"),
+    "Trimestre", "T" &amp; FORMAT([Date], "Q")
+)</code></pre>
+          </div>
+          <p class="reveal">
+            Los años se fuerzan completos —del 1 de enero al 31 de diciembre— porque la inteligencia
+            de tiempo de DAX lo exige. Un calendario que arranca el 3 de enero produce resultados
+            incorrectos sin emitir ningún error.
+          </p>
+
+          <h4 class="reveal">Segmentación de descuento</h4>
+          <div class="codigo reveal">
+            <div class="codigo-cab">DAX</div>
+<pre><code>Tramo descuento =
+SWITCH(TRUE(),
+    supermercado[Discount] = 0, "0 %",
+    supermercado[Discount] &lt;= 0.15, "1-15 %",
+    supermercado[Discount] &lt;= 0.25, "16-25 %",
+    supermercado[Discount] &lt;= 0.45, "26-45 %",
+    "Más de 45 %")</code></pre>
+          </div>
+
+          <h4 class="reveal">Comparación con período anterior</h4>
+          <div class="codigo reveal">
+            <div class="codigo-cab">DAX</div>
+<pre><code>Ventas AA = CALCULATE([Ventas totales], SAMEPERIODLASTYEAR(Calendario[Date]))
+
+Var Ventas % =
+IF(
+    ISBLANK([Ventas AA]),
+    BLANK(),
+    DIVIDE([Ventas totales] - [Ventas AA], [Ventas AA])
+)</code></pre>
+          </div>
+          <p class="reveal">
+            La condición de vacío evita mostrar un cero engañoso cuando no existe período anterior
+            con el cual comparar. Formato personalizado para el signo:
+            <code class="mono">+0,00%;-0,00%;0,00%</code>. Para métricas que ya son porcentajes
+            (margen, descuento), la comparación se expresa en puntos porcentuales, no en variación
+            relativa.
+          </p>
+
+          <h3 class="reveal">Decisiones de diseño defendibles</h3>
+          <ul class="caso-lista reveal">
+            <li><strong>Se descartó un visual de costos de envío</strong> porque el dataset no contiene columna de costo logístico. Construirlo habría implicado inventar el dato.</li>
+            <li><strong>Se descartó el margen por segmento de cliente</strong> porque los tres segmentos rinden entre 11,5 % y 14 %. Un gráfico de tres barras casi idénticas no habilita ninguna decisión.</li>
+            <li><strong>El informe abre filtrado a un año, no a todo el histórico.</strong> Las tarjetas comparan contra el mismo período del año anterior, y esa comparación necesita un período previo que exista. Con los cuatro años seleccionados a la vez, <code class="mono">SAMEPERIODLASTYEAR</code> no encuentra contra qué comparar y las variaciones quedan en blanco. Arrancar en un año concreto garantiza que el tablero muestre la lectura completa desde el primer segundo.</li>
+          </ul>
+
+          <h3 class="reveal">Qué demuestra este proyecto</h3>
+          <ul class="caso-lista reveal">
+            <li>Diagnóstico de errores de carga que producen resultados plausibles pero falsos</li>
+            <li>Modelado dimensional con tabla calendario e inteligencia de tiempo en DAX</li>
+            <li>Transformación en Power Query con control explícito de configuración regional</li>
+            <li>Criterio para descartar visualizaciones que no habilitan decisiones</li>
+            <li>Traducción de un dataset crudo a un hallazgo accionable de negocio</li>
+          </ul>
+
+          <div class="caso-aviso reveal">
+            <b>Sobre el dataset.</b> El histórico corresponde a operaciones minoristas en Estados
+            Unidos entre 2014 y 2017. Es un ejercicio sobre datos públicos, no un trabajo con
+            información de un cliente real.
+          </div>
+        </div>
+
+        <div class="caso-cierre reveal" style="margin-top: 48px;">
+          <a href="index.html#proyectos" class="btn btn-secundario">← Todos los proyectos</a>
+          <a href="index.html#contacto" class="btn btn-primario">Hablemos de datos</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p class="mono">Hecho con HTML, CSS y JavaScript puro — sin frameworks, fácil de mantener.</p>
+    <p class="mono footer-anio">© <span id="anio"></span> · <span id="footer-nombre">Nicolás</span></p>
+  </footer>
+
+  <button id="volver-arriba" class="volver-arriba" aria-label="Volver arriba" title="Volver arriba">↑</button>
+
+  <script src="js/data.js"></script>
+  <script>
+  /* ==========================================================================
+     ⬇⬇  ÚNICO VALOR QUE HAY QUE EDITAR PARA QUE EL TABLERO SE VEA  ⬇⬇
+
+     Pega aquí la URL que entrega Power BI Service en:
+         Archivo → Insertar informe → Publicar en la web (público)
+     Es la del atributo src del iframe, con esta forma:
+         https://app.powerbi.com/view?r=eyJrIjoi...
+
+     Si se deja vacía, la página muestra un aviso en lugar de un marco roto.
+     ========================================================================== */
+  const TABLERO_URL = "https://app.powerbi.com/view?r=eyJrIjoiMWM0NmE3OTAtOTU5MC00MTgyLWE2YzMtNzFhOGUxNzlhYzlkIiwidCI6IjUwYTU5NWYyLWQwN2QtNDM3Ni1hY2Y1LWY0NjAyZjJmMDUyNiIsImMiOjR9";
+
+  (function () {
+    "use strict";
+    const $ = (s) => document.querySelector(s);
+
+    /* ── Identidad tomada de data.js (si está disponible) ─────────────────── */
+    if (typeof DATOS !== "undefined") {
+      $("#logo-iniciales").textContent = DATOS.iniciales;
+      $("#logo-nombre").textContent = DATOS.nombre.toLowerCase() + ".dev";
+      $("#footer-nombre").textContent = DATOS.nombre;
+    }
+    $("#anio").textContent = new Date().getFullYear();
+
+    /* ── Incrustar el informe de Power BI ─────────────────────────────────── */
+    const cont = $("#tablero-embed");
+    const link = $("#tablero-link");
+
+    if (TABLERO_URL) {
+      const iframe = document.createElement("iframe");
+      iframe.src = TABLERO_URL;
+      iframe.title = "Panel de información financiera — Power BI";
+      iframe.loading = "lazy";
+      iframe.allowFullscreen = true;
+      iframe.setAttribute("frameborder", "0");
+      cont.appendChild(iframe);
+      link.href = TABLERO_URL;
+    } else {
+      const aviso = document.createElement("div");
+      aviso.className = "tablero-fallback";
+      aviso.innerHTML =
+        '<img src="assets/tablero-retail.svg" alt="Vista previa del visual de impacto del descuento en el margen" />' +
+        '<p class="mono" style="font-size:12.5px">Pega la URL pública del informe en <b>TABLERO_URL</b> ' +
+        "(proyecto-tablero-retail.html) para incrustar el tablero interactivo.</p>";
+      cont.appendChild(aviso);
+      link.style.display = "none";
+    }
+
+    /* ── Tema claro / oscuro (comparte preferencia con el resto del sitio) ── */
+    const root = document.documentElement;
+    const btnTema = $("#theme-toggle");
+    function aplicarTema(tema) {
+      if (tema === "light") root.setAttribute("data-theme", "light");
+      else root.removeAttribute("data-theme");
+      btnTema.textContent = tema === "light" ? "☀️" : "🌙";
+      localStorage.setItem("tema", tema);
+    }
+    aplicarTema(localStorage.getItem("tema") || "dark");
+    btnTema.addEventListener("click", () =>
+      aplicarTema(root.getAttribute("data-theme") === "light" ? "dark" : "light")
+    );
+
+    /* ── Menú móvil ───────────────────────────────────────────────────────── */
+    const navLinks = $("#nav-links");
+    $("#menu-toggle").addEventListener("click", () => navLinks.classList.toggle("abierto"));
+    navLinks.addEventListener("click", (e) => {
+      if (e.target.tagName === "A") navLinks.classList.remove("abierto");
+    });
+
+    /* ── Scroll: navbar, volver arriba, reveal ────────────────────────────── */
+    const navbar = $("#navbar");
+    const volver = $("#volver-arriba");
+    window.addEventListener("scroll", () => {
+      navbar.classList.toggle("scrolled", window.scrollY > 10);
+      volver.classList.toggle("visible", window.scrollY > 600);
+    }, { passive: true });
+    volver.addEventListener("click", () => window.scrollTo({ top: 0, behavior: "smooth" }));
+
+    const obsReveal = new IntersectionObserver((entradas) => {
+      entradas.forEach((en) => {
+        if (en.isIntersecting) {
+          en.target.classList.add("visible");
+          obsReveal.unobserve(en.target);
+        }
+      });
+    }, { threshold: 0.12 });
+    document.querySelectorAll(".reveal").forEach((e) => obsReveal.observe(e));
+  })();
+  </script>
+</body>
+</html>

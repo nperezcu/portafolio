@@ -72,7 +72,7 @@ const DATOS = {
     },
     {
       categoria: "Visualización & Apps",
-      items: ["Matplotlib", "Seaborn", "Streamlit", "Power BI", "HTML / CSS / JS"],
+      items: ["Matplotlib", "Seaborn", "Streamlit", "Power BI", "DAX", "Power Query", "HTML / CSS / JS"],
     },
     {
       categoria: "Estadística",
@@ -86,7 +86,21 @@ const DATOS = {
 
   /* ── Proyectos ─────────────────────────────────────────────────────────── */
   /* tags: se usan para los filtros. imagen: archivo dentro de assets/.      */
+  /* Enlaces opcionales: repo, demo (+demoTexto) y caso (página interna).    */
   proyectos: [
+    {
+      titulo: "Panel de información financiera — Retail",
+      descripcion:
+        "Tablero financiero para comercio minorista sobre 9.994 transacciones. " +
+        "Identifica dónde la política de descuentos está destruyendo margen: las " +
+        "ventas con más de 45 % de descuento generan 123 mil dólares de facturación " +
+        "y 97 mil de pérdida.",
+      imagen: "assets/tablero-retail.svg",
+      tags: ["Power BI", "Análisis de datos"],
+      tecnologias: ["Power BI", "DAX", "Power Query", "ETL"],
+      caso: "proyecto-tablero-retail.html",
+      destacado: true,
+    },
     {
       titulo: "Riesgo de deterioro crediticio — Banca colombiana",
       descripcion:

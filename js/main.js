@@ -135,9 +135,11 @@
     body.appendChild(tecs);
 
     const links = el("div", "proyecto-links");
+    // "caso" es una página interna del sitio: se abre en la misma pestaña.
+    if (p.caso) links.innerHTML += `<a href="${p.caso}">Caso de estudio →</a>`;
     if (p.repo) links.innerHTML += `<a href="${p.repo}" target="_blank" rel="noopener">Código →</a>`;
-    if (p.demo) links.innerHTML += `<a href="${p.demo}" target="_blank" rel="noopener">Demo →</a>`;
-    if (p.repo || p.demo) body.appendChild(links);
+    if (p.demo) links.innerHTML += `<a href="${p.demo}" target="_blank" rel="noopener">${escapar(p.demoTexto || "Demo")} →</a>`;
+    if (p.caso || p.repo || p.demo) body.appendChild(links);
 
     card.appendChild(body);
     grid.appendChild(card);
