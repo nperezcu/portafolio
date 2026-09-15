@@ -111,7 +111,7 @@ const DATOS = {
         "sin leakage, XGBoost con split temporal purgado y explicabilidad SHAP. " +
         "Incluye dashboard Streamlit y una auditoría que detectó y corrigió " +
         "defectos de construcción del target que inflaban el R².",
-      imagen: "assets/riesgo.png",
+      imagen: "assets/riesgo.webp",
       tags: ["Machine Learning", "Python"],
       tecnologias: ["Python", "XGBoost", "SHAP", "Streamlit", "Parquet"],
       repo: "https://github.com/nperezcu/riesgo-cartera-colombia",
@@ -124,7 +124,7 @@ const DATOS = {
         "Proyecto de consultoría que transforma registros de pacientes enviados por WhatsApp " +
         "en una base de datos estructurada y los analiza geoespacialmente para apoyar decisiones sobre la ubicación " +
         "de recursos de atención prehospitalaria en Bogotá, Colombia. ",
-      imagen: "assets/ambulancias.png",
+      imagen: "assets/ambulancias.webp",
       tags: ["Análisis de datos", "R", "Python"],
       tecnologias: ["Python", "R", "tydiverse", "tidygeocoder", "lubridate"],
       repo: "https://github.com/nperezcu/Proyecto-analisis-de-datos-georreferenciados",
@@ -137,7 +137,7 @@ const DATOS = {
         "Proyecto end-to-end de ciencia de datos enfocado en la estimación dinámica de tarifas para los servicios de Nitro2Tech. " +
         "El proyecto abarca desde la generación de un dataset simulado multivariable el entrenamiento del modelo predictivo, " +
         "hasta su despliegue en una plataforma web estática e interactiva que permite cotizaciones personalizadas en tiempo real.",
-      imagen: "assets/Logo Nitro.png",
+      imagen: "assets/Logo Nitro.webp",
       tags: ["Machine Learning", "Python"],
       tecnologias: ["Python", "HTML", "Javascript", "IA"],
       repo: "https://github.com/nperezcu/Predicci-n-de-precios",
@@ -154,7 +154,7 @@ const DATOS = {
         "con opción de escalar la conversación a un agente humano desde la plataforma. Producto propio en proceso de " +
         "comercialización a múltiples clientes.",
       tags: ["Desarrollo Web", "Automatización", "Python"],
-      imagen: "assets/chatbot.png",
+      imagen: "assets/chatbot.webp",
       tecnologias: ["Python", "JavaScript", "CSS", "WhatsApp Business API", "Google Sheets API", "Google Calendar API"],
       destacado: true,
     },
@@ -165,7 +165,7 @@ const DATOS = {
         "para automatizar reservas y generar comisiones sin intervención manual del cliente. Actualmente en fase de QA.",
       tags: ["Desarrollo Web"],
       tecnologias: ["JavaScript", "HTML", "CSS", "Integración de APIs"],
-      imagen: "assets/carros.png",
+      imagen: "assets/carros.webp",
       demo: "https://qa.latinrentcars.com/",
       demoTexto: "Ver sitio (QA)",
       destacado: false,
@@ -177,7 +177,7 @@ const DATOS = {
         "Incluye estructura multipágina e integración con WhatsApp y redes sociales como canales de conversión de leads.",
       tags: ["Desarrollo Web"],
       tecnologias: ["HTML", "CSS", "JavaScript"],
-      imagen: "assets/neo.png",
+      imagen: "assets/neo.webp",
       demo: "https://www.neo-redes.com/",
       destacado: false,
     },
@@ -188,7 +188,7 @@ const DATOS = {
         "de servicios, con secciones de perfil, servicios, trayectoria y casos de éxito.",
       tags: ["Desarrollo Web"],
       tecnologias: ["Nuxt 4", "Vue 3", "Tailwind CSS"],
-      imagen: "assets/dennis.png",
+      imagen: "assets/dennis.webp",
       demo: "https://cvingdennis.neo-redes.com/",
       destacado: false,
     },
