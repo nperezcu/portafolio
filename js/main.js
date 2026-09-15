@@ -30,7 +30,14 @@
   $("#logo-nombre").textContent = DATOS.nombre.toLowerCase() + ".dev";
   $("#hero-nombre").textContent = DATOS.nombre + ".";
   $("#hero-resumen").textContent = DATOS.resumen;
-  $("#avatar").textContent = DATOS.iniciales;
+  const avatar = $("#avatar");
+  if (DATOS.foto) {
+    avatar.textContent = "";
+    avatar.style.backgroundImage = `url('${DATOS.foto}')`;
+    avatar.classList.add("avatar-foto");
+  } else {
+    avatar.textContent = DATOS.iniciales;
+  }
   $("#ubicacion").textContent = "📍 " + DATOS.ubicacion;
   $("#footer-texto").textContent = DATOS.footer;
   $("#footer-nombre").textContent = DATOS.nombre;
